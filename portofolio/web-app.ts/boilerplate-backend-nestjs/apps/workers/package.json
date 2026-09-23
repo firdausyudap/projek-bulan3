@@ -1,0 +1,22 @@
+{
+  "name": "@repo/workers",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "swc src -d dist",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@repo/shared": "workspace:*",
+    "bullmq": "^5.35.4",
+    "dotenv": "^17.2.3",
+    "ioredis": "^5.4.1"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.3.4/schema.json",
+  "extends": ["@repo/biome-config/biome.json"],
+  "files": {
+    "includes": [
+      "src/**/*.ts",
+      "!src/generated",
+      "!dist",
+      "!src/http",
+      "!src/infrastructure/database/prisma-pagination.ts"
+    ]
+  },
+  "linter": {
+    "rules": {
+      "complexity": {
+        "useLiteralKeys": "off"
+      }
+    }
+  }
+}

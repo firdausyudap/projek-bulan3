@@ -1,0 +1,28 @@
+{
+  "name": "boilerplate-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NestJS Monorepo Boilerplate",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "prisma:generate": "pnpm --filter @repo/shared prisma:generate",
+    "prisma:migrate": "pnpm --filter @repo/shared prisma:migrate",
+    "prisma:status": "pnpm --filter @repo/shared prisma:status",
+    "prisma:deploy": "pnpm --filter @repo/shared prisma:deploy",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.15",
+    "@swc/cli": "^0.8.0",
+    "@swc/core": "^1.10.0",
+    "@types/node": "^22.0.0",
+    "cross-env": "^7.0.3",
+    "husky": "^9.1.7",
+    "turbo": "^2.0.0",
+    "typescript": "^5.0.0"
+  },
+  "packageManager": "pnpm@10.28.1"
+}
