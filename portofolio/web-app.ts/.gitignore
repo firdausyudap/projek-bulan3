@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Hasil compile TypeScript
+dist/
+
+
+# File log
+*.log
+
+# File environment
+.env
+
+# Folder VS Code (opsional)
+.vscode/
+
+# File sistem operasi
+.DS_Store
+Thumbs.db

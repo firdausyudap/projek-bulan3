@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Firdaus Yuda Permana - CBR250RR Racing Creative Developer Portfolio">
+	<title>Firdaus Yuda | CBR250RR Racing Portfolio</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body class="cbr250rr-theme">
+	<div class="loader" id="loader" aria-label="Loading">
+		<div class="loader-content">
+			<div class="loader-logo">YUDA<span>//</span>RR</div>
+			<div class="loader-track"><span id="loaderBar"></span></div>
+			<p>STARTING ENGINE...</p>
+		</div>
+	</div>
+
+	<div class="page-bg"></div>
+	<div class="noise"></div>
+	<div class="red-light"></div>
+
+	<header class="header">
+		<a href="#home" class="logo">FIRDAUS<span>//</span>YUDA</a>
+		<nav class="nav" id="nav" aria-label="Main navigation">
+			<a href="#home" class="active">HOME</a>
+			<a href="#bike">PROFILE</a>
+			<a href="#skills">SKILLS</a>
+			<a href="#gallery">WORKS</a>
+			<a href="#about">ABOUT ME</a>
+			<a href="#contact">CONTACT</a>
+		</nav>
+		<div class="header-actions">
+			<button class="sound-pill" id="checkSoundBtn" type="button"><span id="checkSoundIcon">&#128266;</span> <span id="checkSoundLabel">CHECK SOUND</span></button>
+			<div class="language-switcher">
+				<button class="lang" id="langButton" type="button" aria-expanded="false" aria-haspopup="true">EN&#8964;</button>
+				<div class="language-menu" id="languageMenu" role="menu">
+					<button type="button" role="menuitem" data-language="EN">ENGLISH</button>
+					<button type="button" role="menuitem" data-language="ID">INDONESIA</button>
+					<button type="button" role="menuitem" data-language="JV">BAHASA JAWA</button>
+					<button type="button" role="menuitem" data-language="SU">BASA SUNDA</button>
+					<button type="button" role="menuitem" data-language="MAD">BHASA MADURA</button>
+					<button type="button" role="menuitem" data-language="MIN">BASO MINANGKABAU</button>
+					<button type="button" role="menuitem" data-language="BAL">BASA BALI</button>
+					<button type="button" role="menuitem" data-language="BUG">BASA UGI</button>
+					<button type="button" role="menuitem" data-language="ACE">BAHSA ACEH</button>
+					<button type="button" role="menuitem" data-language="BJN">BAHASA BANJAR</button>
+					<button type="button" role="menuitem" data-language="BTK">BATAK TOBA</button>
+					<button type="button" role="menuitem" data-language="SAS">BAHASA SASAK</button>
+					<button type="button" role="menuitem" data-language="MAK">BASA MANGKASARA</button>
+					<button type="button" role="menuitem" data-language="PLM">BASO PALEMBANG</button>
+					<button type="button" role="menuitem" data-language="JA">日本語</button>
+					<button type="button" role="menuitem" data-language="KO">한국어</button>
+					<button type="button" role="menuitem" data-language="ZH">中文</button>
+					<button type="button" role="menuitem" data-language="AR">العربية</button>
+					<button type="button" role="menuitem" data-language="ES">ESPAÑOL</button>
+					<button type="button" role="menuitem" data-language="FR">FRANÇAIS</button>
+					<button type="button" role="menuitem" data-language="DE">DEUTSCH</button>
+					<button type="button" role="menuitem" data-language="PT">PORTUGUÊS</button>
+					<button type="button" role="menuitem" data-language="IT">ITALIANO</button>
+					<button type="button" role="menuitem" data-language="RU">РУССКИЙ</button>
+				</div>
+			</div>
+			<button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka menu" aria-expanded="false"><i></i><i></i><i></i></button>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero" id="home">
+			<div class="hero-bike" aria-hidden="true">
+				<div class="bike-glow"></div>
+				<div class="cbr-core"></div>
+				<div class="bike-lines"></div>
+			</div>
+			<div class="hero-copy">
+				<p class="kicker">HONDA CBR250RR // PORTFOLIO</p>
+				<h1><span>BUILT TO</span><strong>CREATE</strong></h1>
+				<p class="subtitle">CREATIVE DEVELOPER</p>
+				<p class="description">Saya merancang website, interface, dan pengalaman digital dengan perpaduan visual yang tajam, fungsional, dan berkarakter.</p>
+				<div class="hero-buttons">
+					<a href="#gallery" class="btn">EXPLORE MY WORK <b>&rarr;</b></a>
+					<button class="voice-btn" id="voiceBtn" type="button"><span>&#127908;</span> HEAR INTRO</button>
+				</div>
+			</div>
+			<div class="sound-panel">
+					<div class="sound-title"><span>&#9673;</span><div><strong>AUDIO SYSTEM</strong><small>YUDA CREATIVE EXPERIENCE</small></div></div>
+				<div class="audio-row" id="engineRow">
+					<button class="audio-play" id="playEngine" type="button" aria-label="Play engine sound">&#9654;</button>
+					<div class="audio-info"><strong>FOCUS MODE</strong><small>CREATIVE WORKFLOW</small></div>
+					<div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+					<span class="time" id="engineTime">00:00</span>
+				</div>
+				<div class="audio-row" id="voiceRow">
+					<button class="audio-play" id="playVoice" type="button" aria-label="Play racing voice">&#9654;</button>
+					<div class="audio-info"><strong>YUDA VOICE</strong><small>PERSONAL INTRO</small></div>
+					<div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+					<span class="time">VOICE</span>
+				</div>
+				<div class="volume"><span>&#128266; VOLUME</span><input id="volume" type="range" min="0" max="1" step="0.01" value="0.7" aria-label="Volume"><b id="volumeValue">70%</b></div>
+			</div>
+			<div class="bike-caption"><span>FIRDAUS</span><strong>YUDA</strong></div>
+		</section>
+
+		<section class="stats" id="bike">
+			<div><strong>10</strong><em>+</em><small>SELECTED PROJECTS</small></div>
+			<div><strong>10</strong><em>+</em><small>CORE SKILLS</small></div>
+			<div><strong>∞</strong><em>IDEAS</em><small>ALWAYS LEARNING</small></div>
+			<div><strong>01</strong><em>GOAL</em><small>MAKE IMPACT</small></div>
+		</section>
+
+		<section class="section" id="features">
+			<div class="section-head"><span>01 / CAPABILITIES</span><h2>BUILT TO <b>CREATE.</b></h2></div>
+			<div class="cards">
+				<article><span>01</span><i>&#9889;</i><h3>WEB DEVELOPMENT</h3><p>Membangun website responsif dengan HTML, CSS, dan JavaScript.</p></article>
+				<article><span>02</span><i>&#9670;</i><h3>UI DESIGN</h3><p>Merancang interface yang jelas, modern, dan mudah digunakan.</p></article>
+				<article><span>03</span><i>&#9673;</i><h3>VISUAL DIRECTION</h3><p>Mengolah warna, tipografi, dan komposisi menjadi identitas visual.</p></article>
+				<article><span>04</span><i>&#8623;</i><h3>PROBLEM SOLVING</h3><p>Mengubah kebutuhan dan ide menjadi solusi digital yang nyata.</p></article>
+			</div>
+		</section>
+
+		<section class="section skills" id="skills">
+			<div class="section-head"><span>02 / TOOLKIT</span><h2>SKILLS THAT <b>MOVE.</b></h2></div>
+			<div class="skill-list">
+				<div class="skill-item"><div><strong>HTML &amp; CSS</strong><span>90%</span></div><span class="skill-bar"><i style="--level:90%"></i></span></div>
+				<div class="skill-item"><div><strong>JAVASCRIPT</strong><span>80%</span></div><span class="skill-bar"><i style="--level:80%"></i></span></div>
+				<div class="skill-item"><div><strong>TYPESCRIPT</strong><span>75%</span></div><span class="skill-bar"><i style="--level:75%"></i></span></div>
+				<div class="skill-item"><div><strong>REACT</strong><span>80%</span></div><span class="skill-bar"><i style="--level:80%"></i></span></div>
+				<div class="skill-item"><div><strong>DATABASE</strong><span>75%</span></div><span class="skill-bar"><i style="--level:75%"></i></span></div>
+				<div class="skill-item"><div><strong>API INTEGRATION</strong><span>70%</span></div><span class="skill-bar"><i style="--level:70%"></i></span></div>
+				<div class="skill-item"><div><strong>API KEY MANAGEMENT</strong><span>70%</span></div><span class="skill-bar"><i style="--level:70%"></i></span></div>
+				<div class="skill-item"><div><strong>GIT &amp; GITHUB</strong><span>75%</span></div><span class="skill-bar"><i style="--level:75%"></i></span></div>
+				<div class="skill-item"><div><strong>UI / UX DESIGN</strong><span>85%</span></div><span class="skill-bar"><i style="--level:85%"></i></span></div>
+				<div class="skill-item"><div><strong>BRANDING &amp; VISUALS</strong><span>75%</span></div><span class="skill-bar"><i style="--level:75%"></i></span></div>
+			</div>
+		</section>
+
+		<section class="section gallery" id="gallery">
+			<div class="section-head"><span>03 / SELECTED WORKS</span><h2>MAKE IT <b>MEMORABLE.</b></h2></div>
+			<div class="project-grid">
+				<a class="project-card project-nexora" href="bulan-1/index.html" target="_blank" rel="noreferrer"><div class="project-overlay"><span>01 / WEB APP</span><strong>NEXORA</strong><small>CUACA, BIODATA &amp; SEJARAH INDONESIA <b>&nearr;</b></small></div></a>
+				<a class="project-card project-history" href="bulan-2/index.html" target="_blank" rel="noreferrer"><div class="project-overlay"><span>02 / EDUCATION</span><strong>ENSIKLOPEDIA<br>INDONESIA</strong><small>SEJARAH &amp; PENGETAHUAN <b>&nearr;</b></small></div></a>
+				<a class="project-card project-pos" href="kasir-sederhana/index.html" target="_blank" rel="noreferrer"><div class="project-overlay"><span>03 / BUSINESS APP</span><strong>YUDA<br>POS</strong><small>APLIKASI KASIR SEDERHANA <b>&nearr;</b></small></div></a>
+				<a class="project-card project-weather" href="web-app.ts/index.html" target="_blank" rel="noreferrer"><div class="project-overlay"><span>04 / TYPESCRIPT APP</span><strong>WEATHERLY</strong><small>WEATHER API &amp; API KEY <b>&nearr;</b></small></div></a>
+			</div>
+		</section>
+
+		<section class="section about" id="about">
+			<div><span id="aboutLabel">04 / ABOUT ME</span><h2>IDEAS INTO<br><b>EXPERIENCES.</b></h2><p>Saya Firdaus Yuda Permana, seorang creative developer yang tertarik pada web, interface, visual game, dan branding. Portfolio ini menampilkan proses dan karya yang saya bangun.</p><button class="voice-btn" id="voiceBtn2" type="button">&#127908; PLAY MY INTRO</button></div>
+			<div class="about-profile"><div class="profile-frame"><div class="profile-placeholder">FY<span>01</span></div><img src="Yuda.png" alt="Foto profil Firdaus Yuda" onerror="this.style.display='none'"><small>CREATIVE<br>DEVELOPER</small></div></div>
+		</section>
+
+		<section class="section contact" id="contact">
+			<div class="contact-copy"><span id="contactLabel">05 / CONTACT</span><h2>LET'S MAKE<br><b>IT REAL.</b></h2><p>Punya ide atau project yang ingin diwujudkan? Kirim pesan dan mari mulai percakapannya.</p><a class="contact-email" href="mailto:firdausyuda.permana@gmail.com">firdausyuda.permana@gmail.com <b>&rarr;</b></a><div class="social-links" aria-label="Social media links"><a href="https://github.com/firdausyudap" target="_blank" rel="noreferrer">GITHUB <b>&nearr;</b></a><a href="https://www.instagram.com/firdausyuda26/?hl=en" target="_blank" rel="noreferrer">INSTAGRAM <b>&nearr;</b></a><a href="https://www.tiktok.com/@firdaus.yuda8" target="_blank" rel="noreferrer">TIKTOK <b>&nearr;</b></a><a href="https://wa.me/" target="_blank" rel="noreferrer">WHATSAPP <b>&nearr;</b></a></div></div>
+			<form class="contact-form" action="mailto:firdausyuda.permana@gmail.com" method="post" enctype="text/plain">
+				<label for="name"><span data-label="name">NAMA</span><input id="name" name="Nama" type="text" placeholder="Nama kamu" required></label>
+				<label for="email"><span data-label="email">EMAIL</span><input id="email" name="Email" type="email" placeholder="email@kamu.com" required></label>
+				<label for="message"><span data-label="message">PESAN</span><textarea id="message" name="Pesan" rows="4" placeholder="Ceritakan project kamu..." required></textarea></label>
+				<button class="btn" type="submit">SEND MESSAGE <b>&rarr;</b></button>
+			</form>
+		</section>
+
+		<section class="cta"><span>LET'S BUILD SOMETHING</span><h2>CREATE YOUR <b>IMPACT.</b></h2><a class="btn" href="#home">BACK TO TOP &uarr;</a></section>
+	</main>
+
+	<footer><strong>FIRDAUS<span>//</span>YUDA</strong><small>&copy; 2026 FIRDAUS YUDA PORTFOLIO</small><a href="#home">TOP &uarr;</a></footer>
+	<audio id="checkSound" preload="metadata"><source src="cbr250rr-check-sound.mp3" type="audio/mpeg"></audio>
+	<script src="script.js"></script>
+</body>
+</html>

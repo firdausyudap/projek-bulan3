@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div class="container">
+    <h1><i class="fa-solid fa-cloud-sun"></i> Weatherly</h1>
+
+    <div class="api-key-box">
+        <input type="text" id="apiKeyInput" placeholder="Masukkan API key cuaca (opsional)">
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Masukkan nama kota..." required>
+        <button type="button" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+
+    <!-- Status Memuat -->
+    <div id="loading">
+        <div class="loader"></div>
+        <p>Mencari data cuaca...</p>
+    </div>
+
+    <!-- Status Error -->
+    <div id="error">
+        <i class="fa-solid fa-circle-exclamation fa-3x mb-3"></i>
+        <p id="pesanError">Kota tidak ditemukan, coba periksa ejaan nama kota</p>
+    </div>
+
+    <!-- Hasil Cuaca -->
+    <div id="weather">
+        <h2 id="city"></h2>
+        <p id="date"></p>
+        <img id="icon" alt="Ikon cuaca">
+        <div id="temp"></div>
+        <p id="desc"></p>
+
+        <div class="details">
+            <div class="detail-card">
+                <i class="fa-solid fa-droplet"></i>
+                <div>
+                    <p>Kelembapan</p>
+                    <p id="humidity"></p>
+                </div>
+            </div>
+            <div class="detail-card">
+                <i class="fa-solid fa-wind"></i>
+                <div>
+                    <p>Angin</p>
+                    <p id="wind"></p>
+                </div>
+            </div>
+            <div class="detail-card">
+                <i class="fa-solid fa-temperature-half"></i>
+                <div>
+                    <p>Terasa Seperti</p>
+                    <p id="feels"></p>
+                </div>
+            </div>
+            <div class="detail-card">
+                <i class="fa-solid fa-eye"></i>
+                <div>
+                    <p>Jarak Pandang</p>
+                    <p id="visibility"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="module" src="./dist/cuaca.js"></script>
+</body>
+</html>
