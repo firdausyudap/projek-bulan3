@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Layanan kreatif Yusdai Group">
+    <title>Kreatif | Yusdai Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="technology-page creative-page">
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="{{ url_for('home') }}" class="logo"><span>Y</span>USDAI</a>
+            <a href="{{ url_for('home') }}#layanan" class="back-link">&larr; Semua layanan</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="technology-hero creative-hero">
+            <div class="container technology-hero-grid">
+                <div>
+                    <p class="eyebrow">03 / KREATIF</p>
+                    <h1>Buat brand yang <span>berbicara.</span></h1>
+                    <p class="technology-lead">Kami menerjemahkan ide menjadi identitas visual dan pengalaman digital yang berkarakter, konsisten, dan mudah diingat.</p>
+                    <a href="#pesan-proyek" class="btn btn-primary">Mulai Berkarya <span aria-hidden="true">&darr;</span></a>
+                </div>
+                <div class="technology-mark creative-mark" aria-hidden="true"><span>*</span><strong>MAKE<br>IMPACT.</strong></div>
+            </div>
+        </section>
+
+        <section class="section technology-offer">
+            <div class="container">
+                <div class="section-heading"><p class="eyebrow">APA YANG KAMI BUAT</p><h2>Ide yang punya <span>karakter.</span></h2></div>
+                <div class="technology-features">
+                    <article><span>01</span><h3>Branding</h3><p>Bangun identitas brand yang kuat, relevan, dan konsisten di setiap titik komunikasi.</p></article>
+                    <article><span>02</span><h3>Desain Visual</h3><p>Hadirkan visual yang menarik untuk kebutuhan promosi, publikasi, dan komunikasi bisnis.</p></article>
+                    <article><span>03</span><h3>UI/UX Design</h3><p>Rancang tampilan dan pengalaman digital yang nyaman, jelas, serta mudah digunakan.</p></article>
+                    <article><span>04</span><h3>Konten Kreatif</h3><p>Susun konsep dan materi kreatif yang membantu pesan brand kamu tampil lebih menonjol.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section id="pesan-proyek" class="section technology-order">
+            <div class="container technology-order-grid">
+                <div><p class="eyebrow">MULAI PROYEK</p><h2>Wujudkan ide <span>terbaikmu.</span></h2><p>Ceritakan kebutuhan kreatif kamu. Kami akan membantu mengembangkan konsep, gaya visual, dan hasil akhir yang sesuai dengan tujuan brand.</p></div>
+                <form id="creativeOrderForm" action="{{ url_for('creative_order') }}" method="POST">
+                    <div class="form-group"><label for="creative-name">Nama</label><input type="text" id="creative-name" name="name" placeholder="Nama kamu" required></div>
+                    <div class="form-group"><label for="creative-email">Email</label><input type="email" id="creative-email" name="email" placeholder="email@example.com" required></div>
+                    <div class="form-group"><label for="creative-type">Jenis proyek</label><select id="creative-type" name="project_type" required><option value="">Pilih kebutuhan</option><option value="Branding">Branding</option><option value="Desain visual">Desain visual</option><option value="UI/UX design">UI/UX design</option><option value="Konten kreatif">Konten kreatif</option></select></div>
+                    <div class="form-group"><label for="creative-description">Ceritakan proyek</label><textarea id="creative-description" name="description" rows="5" placeholder="Apa yang ingin kamu buat?" required></textarea></div>
+                    <button type="submit" class="btn btn-primary">Kirim Permintaan <span aria-hidden="true">&rarr;</span></button>
+                    <p id="creativeOrderMessage" class="form-message" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer><div class="container footer-content"><div><div class="logo"><span>Y</span>USDAI</div><p>{{ company.tagline }}.</p></div><a href="{{ url_for('home') }}">Kembali ke beranda &rarr;</a></div></footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Layanan edukasi Yusdai Group">
+    <title>Edukasi | Yusdai Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="technology-page education-page">
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="{{ url_for('home') }}" class="logo"><span>Y</span>USDAI</a>
+            <a href="{{ url_for('home') }}#layanan" class="back-link">&larr; Semua layanan</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="technology-hero education-hero">
+            <div class="container technology-hero-grid">
+                <div>
+                    <p class="eyebrow">02 / EDUKASI</p>
+                    <h1>Belajar jadi lebih <span>bermakna.</span></h1>
+                    <p class="technology-lead">Kami merancang pengalaman belajar digital yang informatif, mudah dipahami, dan dekat dengan kebutuhan pelajar serta pengajar.</p>
+                    <a href="#pesan-proyek" class="btn btn-primary">Rancang Edukasi <span aria-hidden="true">&darr;</span></a>
+                </div>
+                <div class="technology-mark education-mark" aria-hidden="true"><span>BOOK</span><strong>LEARN<br>MORE.</strong></div>
+            </div>
+        </section>
+
+        <section class="section technology-offer">
+            <div class="container">
+                <div class="section-heading"><p class="eyebrow">APA YANG KAMI BUAT</p><h2>Pengetahuan untuk <span>semua.</span></h2></div>
+                <div class="technology-features">
+                    <article><span>01</span><h3>Portal Sejarah</h3><p>Susun arsip dan cerita sejarah menjadi pengalaman digital yang menarik untuk dipelajari.</p></article>
+                    <article><span>02</span><h3>Modul Pembelajaran</h3><p>Materi belajar terstruktur dengan tampilan yang jelas, ringkas, dan mudah diakses.</p></article>
+                    <article><span>03</span><h3>Platform Edukasi</h3><p>Bangun ruang belajar digital untuk menghubungkan siswa, pengajar, materi, dan evaluasi.</p></article>
+                    <article><span>04</span><h3>Konten Interaktif</h3><p>Hidupkan materi dengan kuis, galeri, video, dan aktivitas yang membuat belajar lebih aktif.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section id="pesan-proyek" class="section technology-order">
+            <div class="container technology-order-grid">
+                <div><p class="eyebrow">MULAI PROYEK</p><h2>Bagikan ide <span>edukasi kamu.</span></h2><p>Isi kebutuhan singkatnya. Kami akan membantu menyusun konsep, konten, dan pengalaman digital yang sesuai dengan target belajar kamu.</p></div>
+                <form id="educationOrderForm" action="{{ url_for('education_order') }}" method="POST">
+                    <div class="form-group"><label for="education-name">Nama</label><input type="text" id="education-name" name="name" placeholder="Nama kamu" required></div>
+                    <div class="form-group"><label for="education-email">Email</label><input type="email" id="education-email" name="email" placeholder="email@example.com" required></div>
+                    <div class="form-group"><label for="education-type">Jenis proyek</label><select id="education-type" name="project_type" required><option value="">Pilih kebutuhan</option><option value="Portal sejarah">Portal sejarah</option><option value="Modul pembelajaran">Modul pembelajaran</option><option value="Platform edukasi">Platform edukasi</option><option value="Konten interaktif">Konten interaktif</option></select></div>
+                    <div class="form-group"><label for="education-description">Ceritakan proyek</label><textarea id="education-description" name="description" rows="5" placeholder="Siapa target pembelajarnya?" required></textarea></div>
+                    <button type="submit" class="btn btn-primary">Kirim Permintaan <span aria-hidden="true">&rarr;</span></button>
+                    <p id="educationOrderMessage" class="form-message" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer><div class="container footer-content"><div><div class="logo"><span>Y</span>USDAI</div><p>{{ company.tagline }}.</p></div><a href="{{ url_for('home') }}">Kembali ke beranda &rarr;</a></div></footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

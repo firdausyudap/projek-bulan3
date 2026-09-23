@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yusdai Group - Digital and Creative Solutions">
+    <title>Yusdai Group | Digital &amp; Creative Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#beranda" class="logo"><span>Y</span>USDAI</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">&#9776;</button>
+            <nav id="navMenu" aria-label="Navigasi utama">
+                <a href="#beranda">Beranda</a>
+                <a href="#tentang">Tentang</a>
+                <a href="#layanan">Layanan</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#dokumentasi">Dokumentasi</a>
+                <a href="#kontak">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="beranda" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <p class="eyebrow">DIGITAL &amp; CREATIVE SOLUTIONS</p>
+                    <h1>INOVASI <span>TANPA BATAS.</span></h1>
+                    <p class="hero-description">{{ company.name }} menghadirkan solusi teknologi, edukasi digital, dan kreativitas untuk membantu membangun masa depan yang lebih baik.</p>
+                    <div class="hero-buttons">
+                        <a href="#layanan" class="btn btn-primary">Mulai Proyek <span aria-hidden="true">&rarr;</span></a>
+                        <a href="#portfolio" class="btn btn-outline">Lihat Portfolio</a>
+                    </div>
+                    <div class="js-demo">
+                        <div>
+                            <p class="js-demo-label">PYTHON &rarr; FLASK &rarr; HTML &rarr; JAVASCRIPT</p>
+                            <p class="js-demo-copy"><strong>{{ nama }}</strong> &middot; {{ company.tagline }} &middot; {{ company.location }} &middot; {{ tahun }}</p>
+                        </div>
+                        <button id="btnHello" class="demo-button" type="button">Klik Saya <span aria-hidden="true">&rarr;</span></button>
+                        <p id="hasil" class="demo-result" role="status"></p>
+                    </div>
+                </div>
+                <div class="hero-visual reveal" aria-label="Identitas Yusdai Group">
+                    <div class="hero-card"><div class="ring"></div><div class="hero-card-content"><span>YUSDAI</span><strong>GROUP</strong><small>EST. 2026</small></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang" class="section about">
+            <div class="container">
+                <div class="section-heading"><p class="eyebrow">01 / ABOUT US</p><h2>Membangun Ide Menjadi <span>Realita.</span></h2></div>
+                <div class="about-grid"><p class="large-text">Yusdai Group adalah perusahaan digital dan kreatif yang berfokus pada teknologi, edukasi, dan inovasi.</p><div><p>Kami percaya bahwa teknologi bukan hanya tentang kode dan sistem, tetapi tentang bagaimana teknologi dapat menyelesaikan masalah nyata.</p><p>Dari aplikasi bisnis hingga platform edukasi, kami menggabungkan teknologi dengan kreativitas untuk menghasilkan solusi yang memiliki dampak.</p></div></div>
+            </div>
+        </section>
+
+        <section class="stats"><div class="container stats-grid"><div class="stat"><strong>10+</strong><span>Projects</span></div><div class="stat"><strong>5+</strong><span>Technologies</span></div><div class="stat"><strong>100%</strong><span>Commitment</span></div><div class="stat"><strong>24/7</strong><span>Innovation</span></div></div></section>
+
+        <section id="layanan" class="section services"><div class="container"><div class="section-heading center"><p class="eyebrow">02 / SERVICES</p><h2>Layanan <span>Unggulan.</span></h2></div><div class="service-grid">{% for service in services %}<article class="service-card"><div class="service-icon">{{ service.icon }}</div><span class="service-number">0{{ loop.index }}</span><h3>{{ service.title }}</h3><p>{{ service.description }}</p>{% if service.title == "Teknologi" %}<a href="{{ url_for('technology') }}">Pelajari <span aria-hidden="true">&rarr;</span></a>{% elif service.title == "Edukasi" %}<a href="{{ url_for('education') }}">Pelajari <span aria-hidden="true">&rarr;</span></a>{% elif service.title == "Kreatif" %}<a href="{{ url_for('creative') }}">Pelajari <span aria-hidden="true">&rarr;</span></a>{% else %}<a href="#kontak">Pelajari <span aria-hidden="true">&rarr;</span></a>{% endif %}</article>{% endfor %}</div></div></section>
+
+        <section id="dokumentasi" class="section documentation"><div class="container"><div class="section-heading center"><p class="eyebrow">04 / DOCUMENTATION</p><h2>Dokumentasi <span>Yusdai.</span></h2><p>Rekam jejak proses, kolaborasi, dan perjalanan kami.</p></div><div class="documentation-grid"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900" alt="Diskusi tim" loading="lazy"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900" alt="Tim bekerja" loading="lazy"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=900" alt="Meeting" loading="lazy"></div></div></section>
+
+        <section class="cta"><div class="container"><p class="eyebrow">HAVE AN IDEA?</p><h2>Mari buat sesuatu yang <span>luar biasa.</span></h2><a href="#kontak" class="btn btn-primary">Mulai Diskusi <span aria-hidden="true">&rarr;</span></a></div></section>
+
+        <section id="kontak" class="section contact"><div class="container contact-grid"><div><p class="eyebrow">05 / CONTACT</p><h2>Hubungi <span>Kami.</span></h2><p>Punya ide atau proyek yang ingin dikembangkan? Mari kita bicarakan.</p><div class="contact-info"><p>info@yusdaigroup.com</p><p>+62 812-3456-7890</p><p>Indonesia</p></div></div><form id="contactForm" action="/contact" method="POST"><div class="form-group"><label for="name">Nama</label><input type="text" id="name" name="name" placeholder="Nama kamu" required></div><div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="email@example.com" required></div><div class="form-group"><label for="message">Pesan</label><textarea id="message" name="message" rows="6" placeholder="Ceritakan project kamu..." required></textarea></div><button type="submit" class="btn btn-primary">Kirim Pesan <span aria-hidden="true">&rarr;</span></button><p id="formMessage" class="form-message" role="status"></p></form></div></section>
+        <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" hidden>
+            <div class="project-modal-backdrop" data-close-project></div>
+            <div class="project-modal-content">
+                <button class="project-modal-close" type="button" aria-label="Tutup detail karya" data-close-project>&times;</button>
+                <img id="projectModalImage" src="" alt="">
+                <div class="project-modal-copy"><p class="eyebrow" id="projectModalCategory"></p><h2 id="projectModalTitle"></h2><p id="projectModalDescription"></p><a id="projectModalLink" href="#layanan" class="btn btn-primary" data-close-project>Lihat Layanan Terkait <span aria-hidden="true">&rarr;</span></a></div>
+            </div>
+        </div>
+    </main>
+
+    <footer><div class="container footer-content"><div><div class="logo"><span>Y</span>USDAI</div><p>Digital &amp; Creative Solutions.</p></div><p>&copy; 2026 Yusdai Group. All Rights Reserved.</p></div></footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
